@@ -1,0 +1,71 @@
+/* ===== Page entière ===== */
+/* Fond blanc et marge verticale pour aérer la page [slide 9] */
+body {
+    margin: 0;
+    padding: 40px 0;
+    background-color: #ffffff;
+}
+
+/* ===== Conteneur du tableau (#table_container) ===== */
+/* Sélecteur d'identifiant (#) [slide 9] */
+#table_container {
+    /* Police globale : Calibri en premier choix, puis solutions de repli [slide 10] */
+    font-family: Calibri, Arial, sans-serif;
+
+    /* Largeur fixe et centrage horizontal du conteneur (margin auto) [slide 9] */
+    width: 700px;
+    margin: 0 auto;
+
+    /* Fond blanc, espace interne et ombre légère [slide 9] */
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+/* ===== Tableau ===== */
+/* Tableau centré dans son conteneur, bordures fusionnées [slide 9] */
+#persons_table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 15px;
+    background-color: #ffffff;
+}
+
+/* ===== En-tête (th) ===== */
+/* Sélecteur d'élément (th) [slide 10] */
+#persons_table th {
+    background-color: #007bbd;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #0069a0;
+}
+
+/* ===== Cellules (td) ===== */
+/* Sélecteur d'élément (td) et bordures [slide 9] */
+#persons_table td {
+    padding: 8px 10px;
+    border: 1px solid #dddddd;
+    vertical-align: middle;
+}
+
+/* ===== Classes des colonnes ===== */
+
+/* N° et Points : valeurs numériques centrées [slide 9] */
+.col_number {
+    text-align: center;
+    width: 70px;
+}
+
+/* Nom et Prénom : texte aligné à gauche [slide 9] */
+.col_text {
+    text-align: left;
+}
+
+/* Case à cocher : centrée et de largeur réduite [slide 9] */
+.col_chkbox {
+    text-align: center;
+    width: 70px;
+}
+

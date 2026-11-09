@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP4 - Étape 4 : Espace "Résumé"</title>
+
+    <!-- Lien vers la feuille de style externe style.css [Slide 9] -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Conteneur principal du tableau [Slide 10] -->
+    <div id="table_container">
+
+        <!-- Élément tableau [Slides 8 et 9] -->
+        <table id="persons_table">
+
+            <!-- En-tête du tableau [Slide 18] -->
+            <thead>
+                <tr>
+                    <th>N°</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Points</th>
+                    <th>Select</th>
+                </tr>
+            </thead>
+
+            <!-- Corps du tableau rempli dynamiquement en JavaScript [Slide 18] -->
+            <tbody>
+            </tbody>
+        </table>
+
+        <!-- Espace "Résumé" inséré juste au-dessous du tableau [Slides 32 et 33] -->
+        <div id="container_summary">
+            <p id="p1">0 ligne(s)</p>
+            <p id="p2"></p>
+            <p id="p3">Totale point(s)= 0</p>
+        </div>
+
+        <!-- Bouton Ajouter modifié pour appeler doInsert('Nom', 'Prénom', 10) [Slide 44]
+             (vu dans le cours DOM : Gestion des événements inline onclick) -->
+        <button onclick="doInsert('Nom', 'Prénom', 10)">Ajouter</button>
+
+        <!-- Bouton "Console Tableau" qui affiche le tableau d'objets dans la console [Slides 29 et 30] -->
+        <button onclick="consoleTableau()">Console Tableau</button>
+    </div>
+
+    <!-- Inclusion du fichier script externe script.js [Slide 14] -->
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP4 - Étape 6 : Suppression des lignes sélectionnées</title>
+
+    <!-- Lien vers la feuille de style externe style.css [Slide 9] -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Conteneur principal du tableau et du formulaire [Slide 10] -->
+    <div id="table_container">
+
+        <!-- Formulaire de saisie inséré juste au-dessus du tableau [Slide 48] -->
+        <div id="form_container">
+            <div class="form_group">
+                <label class="form_label">Nom:</label>
+                <input type="text" id="form_nom" class="form_field"/>
+            </div>
+            <div class="form_group">
+                <label class="form_label">Prénom:</label>
+                <input type="text" id="form_Prénom" class="form_field"/>
+            </div>
+            <div class="form_group">
+                <label class="form_label">Points:</label>
+                <input type="number" id="form_points" class="form_field"/>
+            </div>
+            <!-- Bouton Ajouter avec la classe "btn-add" et l'événement onclick="doNewData()" [Slides 51 et 63]
+                 (vu dans le cours DOM : Gestion des événements inline onclick) -->
+            <button class="btn-add" onclick="doNewData()">Ajouter</button>
+        </div>
+
+        <!-- Élément tableau [Slides 8 et 9] -->
+        <table id="persons_table">
+
+            <!-- En-tête du tableau [Slide 18] -->
+            <thead>
+                <tr>
+                    <th>N°</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Points</th>
+                    <th>Select</th>
+                </tr>
+            </thead>
+
+            <!-- Corps du tableau rempli dynamiquement en JavaScript [Slide 18] -->
+            <tbody>
+            </tbody>
+        </table>
+
+        <!-- Espace "Résumé" inséré juste au-dessous du tableau [Slides 32 et 33] -->
+        <div id="container_summary">
+            <p id="p1">0 ligne(s)</p>
+            <p id="p2"></p>
+            <p id="p3">Totale point(s)= 0</p>
+        </div>
+
+        <!-- Conteneur regroupant les boutons Console Tableau et Supprimer [Slides 60 et 63] -->
+        <div id="container_btn">
+            <!-- Bouton "Console Tableau" avec la classe "btn-consol" [Slides 29, 30 et 63] -->
+            <button class="btn-consol" onclick="consoleTableau()">Console Tableau</button>
+
+            <!-- Bouton "Supprimer" avec la classe "btn-del" et l'événement onclick="deleteRow()" [Slides 60 et 63] -->
+            <button class="btn-del" onclick="deleteRow()">Supprimer</button>
+        </div>
+
+    </div>
+
+    <!-- Inclusion du fichier script externe script.js [Slide 14] -->
+    <script src="script.js"></script>
+
+</body>
+</html>

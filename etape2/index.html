@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP4 - Étape 2 : Tableau statique</title>
+
+    <!-- Lien vers la feuille de style externe style.css [slide 9] -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Conteneur du tableau : identifiant imposé par l'énoncé (table_container) [slide 10] -->
+    <div id="table_container">
+
+        <!-- Élément tableau [slide 8 et 9] -->
+        <table id="persons_table">
+
+            <!-- En-tête du tableau : thead regroupe les titres des colonnes [slide 8] -->
+            <thead>
+                <tr>
+                    <th>N°</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Points</th>
+                    <th>Select</th>
+                </tr>
+            </thead>
+
+            <!-- Corps du tableau : contient les lignes de données [slide 8 et 9] -->
+            <tbody>
+                <!-- Ligne 1 -->
+                <tr>
+                    <!-- Classes CSS : col_number pour les nombres, col_text pour le texte, col_chkbox pour la case à cocher [slide 9] -->
+                    <td class="col_number">1</td>
+                    <td class="col_text">Nom1</td>
+                    <td class="col_text">Prénom1</td>
+                    <td class="col_number">5</td>
+                    <td class="col_chkbox"><input type="checkbox"/></td>
+                </tr>
+
+                <!-- Ligne 2 -->
+                <tr>
+                    <td class="col_number">2</td>
+                    <td class="col_text">Nom2</td>
+                    <td class="col_text">Prénom2</td>
+                    <td class="col_number">10</td>
+                    <td class="col_chkbox"><input type="checkbox"/></td>
+                </tr>
+
+                <!-- Ligne 3 -->
+                <tr>
+                    <td class="col_number">3</td>
+                    <td class="col_text">Nom3</td>
+                    <td class="col_text">Prénom3</td>
+                    <td class="col_number">15</td>
+                    <td class="col_chkbox"><input type="checkbox"/></td>
+                </tr>
+            </tbody>
+        </table>
+         <!-- Bouton Ajouter avec l'événement onclick (Slides 13 et 14) -->
+        <button onclick="doInsertRowTable(99, 'Nom', 'Prénom', 10)"> Ajouter </button>
+    </div>
+     <!-- Inclusion du fichier script externe script.js (Slide 14) -->
+    <script src="script.js"></script>
+
+</body>
+</html>

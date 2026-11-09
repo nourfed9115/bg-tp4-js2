@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP4 - Étape 3 : Insertion à partir d'un tableau d'objets</title>
+
+    <!-- Lien vers la feuille de style externe style.css [slide 9] -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Conteneur du tableau : identifiant imposé par l'énoncé (table_container) [slide 10] -->
+    <div id="table_container">
+
+        <!-- Élément tableau [slide 8 et 9] -->
+        <table id="persons_table">
+
+            <!-- En-tête du tableau : on conserve uniquement l'entête et on supprime les lignes statiques [slide 18] -->
+            <thead>
+                <tr>
+                    <th>N°</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Points</th>
+                    <th>Select</th>
+                </tr>
+            </thead>
+
+            <!-- Corps du tableau vidé : les lignes seront insérées dynamiquement en JavaScript [slide 18] -->
+            <tbody>
+            </tbody>
+        </table>
+
+        <!-- Bouton Ajouter avec l'événement onclick [Slides 13 et 14] -->
+        <button onclick="doInsertRowTable(99, 'Nom', 'Prénom', 10)">Ajouter</button>
+
+        <!-- Nouveau bouton "Console Tableau" avec un événement click qui exécute consoleTableau() 
+             (vu dans le cours DOM : Gestion des événements inline onclick, slide Événements JS / TP slides 29 et 30) -->
+        <button onclick="consoleTableau()">Console Tableau</button>
+    </div>
+
+    <!-- Inclusion du fichier script externe script.js [Slide 14] -->
+    <script src="script.js"></script>
+
+</body>
+</html>

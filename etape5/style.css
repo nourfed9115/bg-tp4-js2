@@ -1,0 +1,137 @@
+/* ===== Page entière ===== */
+/* Fond blanc  et marge verticale pour aérer la page [Slide 9] */
+body {
+    margin: 0;
+    padding: 40px 0;
+    background-color: #ffffff;
+}
+
+/* ===== Conteneur du tableau (#table_container) ===== */
+/* Sélecteur d'identifiant (#) [Slide 9] */
+#table_container {
+    /* Police globale : Calibri en premier choix, puis solutions de repli [Slide 10] */
+    font-family: Calibri, Arial, sans-serif;
+
+    /* Largeur fixe et centrage horizontal du conteneur (margin auto) [Slide 9] */
+    width: 700px;
+    margin: 0 auto;
+
+    /* Fond blanc, espace interne et ombre légère [Slide 9] */
+    background-color: #ffffff;
+    padding: 20px;
+    
+}
+
+/* ===== Mise en forme du formulaire (#form_container) [Slide 49] ===== */
+/* Conteneur du formulaire situé juste au-dessus du tableau */
+#form_container {
+    border: 1px solid #dddddd;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+}
+
+/* Alignement des groupes (label + champ) sur une seule ligne [Slide 49] */
+.form_group {
+    display: inline-block;
+    margin-right: 6px;
+}
+
+/* Style des intitulés (Nom:, Prénom:, Points:) en gras [Slide 49] */
+.form_label {
+    font-weight: bold;
+    font-size: 13px;
+    margin-right: 3px;
+}
+
+/* Style des champs de saisie input [Slide 49] */
+.form_field {
+    width: 130px;
+    padding: 3px 5px;
+    border: 1px solid #aaaaaa;
+    border-radius: 2px;
+}
+
+/* ===== Tableau ===== */
+/* Tableau centré dans son conteneur, bordures fusionnées [Slide 9] */
+#persons_table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+/* ===== En-tête (th) ===== */
+/* Sélecteur d'élément (th) [Slide 10] */
+#persons_table th {
+    background-color: #007bbd;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #0069a0;
+}
+
+/* ===== Cellules (td) ===== */
+/* Sélecteur d'élément (td) et bordures [Slide 9] */
+#persons_table td {
+    padding: 8px 10px;
+    border: 1px solid #dddddd;
+    vertical-align: middle;
+     background-color: #ffffff;
+}
+
+/* ===== Classes des colonnes ===== */
+
+/* N° et Points : valeurs numériques centrées [Slide 9] */
+.col_number {
+    text-align: center;
+    width: 70px;
+}
+
+/* Nom et Prénom : texte aligné à gauche [Slide 9] */
+.col_text {
+    text-align: left;
+}
+
+/* Case à cocher : centrée et de largeur réduite [Slide 9] */
+.col_chkbox {
+    text-align: center;
+    width: 70px;
+}
+
+
+/* ===== Espace "Résumé" (#container_summary) [Slide 34] ===== */
+/* Conteneur du résumé placé sous le tableau */
+#container_summary {
+    background-color: #e9e9e9;
+    border: 1px solid #dddddd;
+    border-top: none;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #333333;
+}
+
+/* Mise en forme des paragraphes p1, p2 et p3 sur une seule ligne [Slide 34] */
+#p1, #p2, #p3 {
+    display: inline-block;
+    margin: 0;
+}
+
+/* p1 : nombre de lignes aligné à gauche [Slide 34] */
+#p1 {
+    width: 20%;
+    text-align: left;
+}
+
+/* p2 : espace vide central [Slide 34] */
+#p2 {
+    width: 50%;
+}
+
+/* p3 : total des points aligné à droite sous la colonne Points [Slide 34] */
+#p3 {
+    width: 28%;
+    text-align: right;
+}
