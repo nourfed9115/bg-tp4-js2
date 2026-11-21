@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP4 - etape7</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="table_container">
+
+        <!-- Formulaire de saisie -->
+        <div id="form_container">
+            <div class="form_group">
+                <label class="form_label">Nom:</label>
+                <input type="text" id="form_nom" class="form_field"/>
+            </div>
+            <div class="form_group">
+                <label class="form_label">Prénom:</label>
+                <input type="text" id="form_Prénom" class="form_field"/>
+            </div>
+            <div class="form_group">
+                <label class="form_label">Points:</label>
+                <input type="number" id="form_points" class="form_field"/>
+            </div>
+            <button class="btn-add" onclick="doNewData()">Ajouter</button>
+        </div>
+
+        <!-- NOUVEAU : zone de messages (doublon, annulation...) -->
+        <div id="message"></div>
+
+        <!-- NOUVEAU : podium des 3 meilleurs scores (rempli par JavaScript) -->
+        <div id="podium"></div>
+
+        <!-- Tableau -->
+        <table id="persons_table">
+            <thead>
+                <tr>
+                    <th>N°</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Points</th>
+                    <th>Select</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <!-- Résumé -->
+        <div id="container_summary">
+            <p id="p1">0 ligne(s)</p>
+            <p id="p2"></p>
+            <p id="p3">Totale point(s)= 0</p>
+        </div>
+
+        <!-- Boutons -->
+        <div id="container_btn">
+            <!-- NOUVEAU : bouton d'annulation de la dernière suppression (désactivé au départ) -->
+            <button class="btn-undo" id="btn_undo" onclick="undoDelete()" disabled>↩ Annuler la suppression</button>
+            <button class="btn-consol" onclick="consoleTableau()">Console Tableau</button>
+            <button class="btn-del" onclick="deleteRow()">Supprimer</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

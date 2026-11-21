@@ -1,0 +1,266 @@
+/* ===== Page entière ===== */
+body {
+    margin: 0;
+    padding: 40px 0;
+    background-color: #ffffff;
+}
+
+/* ===== Conteneur du tableau (#table_container) ===== */
+#table_container {
+    font-family: Calibri, Arial, sans-serif;
+    width: 700px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+/* ===== Formulaire (#form_container) ===== */
+#form_container {
+    border: 1px solid #dddddd;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+}
+
+.form_group {
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.form_label {
+    font-weight: bold;
+    font-size: 13px;
+    margin-right: 3px;
+}
+
+.form_field {
+    width: 130px;
+    padding: 3px 5px;
+    border: 1px solid #aaaaaa;
+    border-radius: 2px;
+}
+
+/* ===== NOUVEAU : zone de messages ===== */
+#message {
+    display: none;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+#message.msg_warning {
+    display: block;
+    background-color: #fff3cd;
+    border: 1px solid #e0a800;
+    color: #7a5b00;
+}
+
+#message.msg_success {
+    display: block;
+    background-color: #d4edda;
+    border: 1px solid #28a745;
+    color: #155724;
+}
+
+/* ===== NOUVEAU : podium des 3 meilleurs scores ===== */
+#podium {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.podium_item {
+    flex: 1;
+    text-align: center;
+    padding: 8px 6px;
+    border-radius: 4px;
+    border: 1px solid #dddddd;
+}
+
+.podium_medal {
+    display: block;
+    font-size: 28px;
+}
+
+.podium_name {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+.podium_points {
+    display: block;
+    font-size: 13px;
+    color: #333333;
+}
+
+.podium_gold {
+    background-color: #fff8dc;
+    border-color: #e6c200;
+}
+
+.podium_silver {
+    background-color: #f2f2f2;
+    border-color: #b0b0b0;
+}
+
+.podium_bronze {
+    background-color: #fbeee0;
+    border-color: #cd7f32;
+}
+
+.podium_empty {
+    flex: 1;
+    text-align: center;
+    padding: 8px;
+    color: #777777;
+    font-size: 14px;
+    border: 1px dashed #cccccc;
+    border-radius: 4px;
+}
+
+/* ===== Tableau ===== */
+#persons_table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+#persons_table th {
+    background-color: #007bbd;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #0069a0;
+}
+
+#persons_table td {
+    padding: 8px 10px;
+    border: 1px solid #dddddd;
+    vertical-align: middle;
+    background-color: #ffffff;
+}
+
+/* ===== Classes des colonnes ===== */
+.col_number {
+    text-align: center;
+    width: 70px;
+}
+
+.col_text {
+    text-align: left;
+}
+
+.col_chkbox {
+    text-align: center;
+    width: 70px;
+}
+
+/* ===== NOUVEAU : animation de la ligne en doublon ===== */
+.row_duplicate {
+    animation: dupShake 0.4s ease 3;
+}
+
+.row_duplicate td {
+    animation: dupFlash 0.6s ease 3;
+}
+
+@keyframes dupFlash {
+    0%   { background-color: #ffffff; }
+    50%  { background-color: #ffb347; }
+    100% { background-color: #ffffff; }
+}
+
+@keyframes dupShake {
+    0%   { transform: translateX(0); }
+    25%  { transform: translateX(-6px); }
+    50%  { transform: translateX(6px); }
+    75%  { transform: translateX(-6px); }
+    100% { transform: translateX(0); }
+}
+
+/* ===== Résumé (#container_summary) ===== */
+#container_summary {
+    background-color: #e9e9e9;
+    border: 1px solid #dddddd;
+    border-top: none;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #333333;
+}
+
+#p1, #p2, #p3 {
+    display: inline-block;
+    margin: 0;
+}
+
+#p1 {
+    width: 20%;
+    text-align: left;
+}
+
+#p2 {
+    width: 50%;
+}
+
+#p3 {
+    width: 28%;
+    text-align: right;
+}
+
+/* ===== Boutons ===== */
+#container_btn {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.btn-add,
+.btn-consol,
+.btn-del,
+.btn-undo {
+    color: #ffffff;
+    border: none;
+    padding: 6px 12px;
+    font-family: Calibri, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.btn-add {
+    background-color: #009900;
+}
+
+.btn-consol {
+    background-color: #c68c13;
+    margin-right: 5px;
+}
+
+.btn-del {
+    background-color: #ff0000;
+}
+
+/* NOUVEAU : bouton Annuler (bleu-gris), grisé quand désactivé */
+.btn-undo {
+    background-color: #5a6b7b;
+    margin-right: 5px;
+}
+
+.btn-undo:disabled {
+    background-color: #b8c0c8;
+    cursor: not-allowed;
+}
+
+.btn-add:hover,
+.btn-consol:hover,
+.btn-del:hover,
+.btn-undo:hover:not(:disabled) {
+    opacity: 0.85;
+}
